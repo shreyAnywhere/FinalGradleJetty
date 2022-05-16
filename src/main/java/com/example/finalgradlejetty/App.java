@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Server server = new Server(8080);
-        WebAppContext  context=new WebAppContext();
+        WebAppContext context = new WebAppContext();
         context.setContextPath("/hello-servlet");
 
         server.setHandler(context);
