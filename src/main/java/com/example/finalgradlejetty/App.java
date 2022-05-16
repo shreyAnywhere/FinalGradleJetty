@@ -12,7 +12,7 @@ public class App {
         Server server = new Server(8080);
         WebAppContext webAppContext = new WebAppContext();
 
-        URL webDir = App.class.getClassLoader().getResource("src/main/java/com/example/finalgradlejetty/HelloServlet.java");
+        URL webDir = App.class.getClassLoader().getResource("com.example.finalgradlejetty.HelloServlet");
         //context.setResourceBase(webDir.toURI().toString());
         webAppContext.setContextPath("/");
         webAppContext.setDescriptor("src/main/webapp/WEB-INF/web.xml");
