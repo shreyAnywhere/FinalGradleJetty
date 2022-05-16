@@ -14,7 +14,7 @@ public class App {
 
         URL webDir = App.class.getClassLoader().getResource("src/main/java/com/example/finalgradlejetty/HelloServlet.java");
         //context.setResourceBase(webDir.toURI().toString());
-        webAppContext.setContextPath("/");
+        webAppContext.setContextPath("src/main/java/com/example/finalgradlejetty/HelloServlet.java");
         webAppContext.setDescriptor("src/main/webapp/WEB-INF/web.xml");
         webAppContext.setResourceBase(webDir.toURI().toString());
         webAppContext.setParentLoaderPriority(true);
