@@ -1,13 +1,7 @@
 package com.example.finalgradlejetty;
 
-import jakarta.servlet.Servlet;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.webapp.WebAppContext;
-
-import javax.servlet.http.HttpServletMapping;
-import java.net.URL;
 
 public class App {
 
