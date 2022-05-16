@@ -14,7 +14,7 @@ public class App {
 
         webAppContext.setContextPath("/");
         webAppContext.setDescriptor("src/main/webapp/WEB-INF/web.xml");
-        webAppContext.setResourceBase("src/main/webapp/");
+        webAppContext.setResourceBase("src/main/java/com/example/finalgradlejetty/HelloServlet.java");
         webAppContext.setParentLoaderPriority(true);
 
         server.setHandler(webAppContext);
