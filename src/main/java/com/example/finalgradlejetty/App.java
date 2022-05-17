@@ -12,11 +12,11 @@ public class App {
         Server server = new Server(8080);
         WebAppContext webAppContext = new WebAppContext();
 
-        //URL webDir = App.class.getClassLoader().getResource("com.example.finalgradlejetty.HelloServlet");
+        URL webDir = App.class.getClassLoader().getResource("src/main/java/com/example/finalgradlejetty/HelloServlet.java");
         //context.setResourceBase(webDir.toURI().toString());
         webAppContext.setContextPath("/");
         webAppContext.setDescriptor("src/main/webapp/WEB-INF/web.xml");
-        webAppContext.setResourceBase("com/example/finalgradlejetty/HelloServlet.java");
+        webAppContext.setResourceBase(webDir.toURI().toString());
         webAppContext.setParentLoaderPriority(true);
 
         server.setHandler(webAppContext);
