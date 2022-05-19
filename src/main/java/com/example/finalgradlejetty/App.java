@@ -21,12 +21,12 @@ public class App {
         connector.setPort(8080);
         server.setConnectors(new Connector[] {connector});
         ServletHandler servletHandler = new ServletHandler();
-        ServletHolder servletHolder = new ServletHolder();
-        servletHolder.setName("default");
-        servletHolder.setClassName("HelloServlet");
+//        ServletHolder servletHolder = new ServletHolder();
+//        servletHolder.setName("default");
+//        servletHolder.setClassName("HelloServlet");
 
         //servletHandler.addServletWithMapping("HelloServlet", "/");
-        servletHandler.addServletWithMapping(servletHolder, "/");
+        servletHandler.addServletWithMapping((Class) HelloServlet.class, "/");
 
         server.setHandler(servletHandler);
         server.start();
